@@ -13,10 +13,16 @@ class HomeScreen extends StatelessWidget {
         print("constraints: $constraints");
         if (constraints.maxWidth <= 375.0) {
           print("縦画面ですね");
-          return const Text("縦画面", style: TextStyle(fontSize: 25.0));
+          return const Align(
+            alignment: Alignment.bottomLeft,
+            child: Text("縦画面", style: TextStyle(fontSize: 25.0)),
+          );
         } else {
           print("横画面ですね");
-          return const Text("横画面", style: TextStyle(fontSize: 35.0));
+          return const Align(
+            alignment: Alignment.bottomRight,
+            child: Text("横画面", style: TextStyle(fontSize: 35.0)),
+          );
         }
       }),
     );
