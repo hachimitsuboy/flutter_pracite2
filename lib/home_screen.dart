@@ -9,13 +9,16 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("LayoutBuilder"),
       ),
-      body: Container(
-        width: 400,
-        height: 500,
-        child: LayoutBuilder(builder: (context, constraints) {
-          print("constraints: $constraints");
-          return Text("あああ");
-        })),
-      );
+      body: LayoutBuilder(builder: (context, constraints) {
+        print("constraints: $constraints");
+        if (constraints.maxWidth <= 375.0) {
+          print("縦画面ですね");
+          return const Text("縦画面", style: TextStyle(fontSize: 25.0));
+        } else {
+          print("横画面ですね");
+          return const Text("横画面", style: TextStyle(fontSize: 35.0));
+        }
+      }),
+    );
   }
 }
