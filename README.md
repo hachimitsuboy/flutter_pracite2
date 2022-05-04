@@ -23,3 +23,5 @@ Container(
     child: Text("右下に配置するよ")
   ),
 );
+
+LayoutBuilderを用いて作成したアプリでTextをContainerの中で縦画面の時は左下に表示させ、横画面の時は右下に表示させた。
